@@ -127,23 +127,18 @@ export default function ScenarioColumn({
             onKeyDown={(e) => { if (e.key === "Enter") nameRef.current?.blur(); }}
             title="Click to rename scenario"
           />
-          {helperText && <div className={styles.helperText}>{helperText}</div>}
-          {showResetLink && onReset && (
-            <button
-              onClick={onReset}
-              style={{
-                background: "none",
-                border: "none",
-                color: "var(--interactive)",
-                fontSize: 11,
-                cursor: "pointer",
-                textDecoration: "underline",
-                padding: 0,
-                marginTop: 2,
-              }}
-            >
-              Reset to Recommendation
-            </button>
+          {helperText && (
+            <div className={styles.helperText}>
+              {helperText}
+              {showResetLink && onReset && (
+                <>
+                  {" · "}
+                  <button className={styles.resetLink} onClick={onReset}>
+                    Reset to Recommendation
+                  </button>
+                </>
+              )}
+            </div>
           )}
         </div>
         <KebabMenu onDelete={onDelete} />

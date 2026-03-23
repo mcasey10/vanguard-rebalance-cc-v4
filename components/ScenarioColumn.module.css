@@ -17,7 +17,6 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 8px;
-  min-height: 90px; /* FIX 13c: equal-height headers */
 }
 
 .scenarioLabel {
@@ -60,6 +59,17 @@
   font-size: 11px;
   color: var(--text-muted);
   margin-top: 2px;
+}
+
+.resetLink {
+  background: none;
+  border: none;
+  color: var(--interactive);
+  font-size: 11px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  font-family: var(--font-sans);
 }
 
 /* Kebab menu (FIX 13a) */

@@ -485,19 +485,19 @@ When viewport is too narrow for side-by-side scenario columns, stack fund data
 vertically within each column (Fund → Sell Amount → G/L → Tax on separate lines).
 Single-scenario view always uses horizontal row layout.
 
-**Scenario header:**
-Each scenario column has: SCENARIO A label (small caps, muted) · Scenario name
-(bold, editable inline) · sub-text (Pre-filled from Recommendation / Based on your
-manual entries) · Reset to Recommendation link (hidden when source=manual) ·
-kebab menu ⋮ (top-right of header)
+**Scenario header — compact layout:**
+Each scenario column header contains:
+- Row 1: `SCENARIO A` label (small caps, muted, 11px) + kebab menu ⋮ (right-aligned)
+- Row 2: Scenario name (bold, editable inline, 16px)
+- Row 3: Sub-text + Reset link on the SAME LINE:
+  `Pre-filled from Recommendation · Reset to Recommendation`
+  Sub-text in muted colour, "Reset to Recommendation" as a blue link immediately after,
+  separated by ` · `. Do NOT put Reset on its own row.
+  Hide "Reset to Recommendation" when source=manual or when unmodified.
 
-Kebab menu items: Rename · Duplicate · Delete
-- Delete: removes the column and shifts remaining scenarios left
-  (B becomes A if A is deleted, C becomes B)
-- All three options must be functional
+No extra padding between the mode tab strip and the scenario header area — use 8px gap maximum.
 
-All scenario header blocks must be equal height (`align-items: stretch`) so fund
-rows align horizontally across columns when multiple scenarios are shown.
+All scenario header blocks must be equal height (`align-items: stretch`) so fund rows align horizontally across columns when multiple scenarios are shown.
 
 **ⓘ tooltip on LT G/L column header:**
 Custom dark CSS tooltip (NOT native `title` attribute) on hover:

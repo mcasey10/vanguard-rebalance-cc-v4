@@ -15,7 +15,10 @@ app = FastAPI(title="Vanguard Sell & Rebalance API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3003"],
+    allow_origins=[
+    "http://localhost:3003",
+    "https://vanguard-rebalance-cc-v4.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
