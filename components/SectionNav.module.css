@@ -1,0 +1,47 @@
+.sectionNav {
+  background: var(--paper);
+  border-bottom: 1px solid var(--border);
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  height: 41px;
+  gap: 0;
+}
+
+.tab {
+  height: 41px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.15s;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  text-decoration: none;
+  border-bottom-color: var(--border);
+}
+
+.tabActive {
+  font-weight: 700;
+  border-bottom-color: var(--brand-red);
+}
+
+.tabPulse {
+  animation: pulse-tab 1s ease-out 3;
+}
+
+@keyframes pulse-tab {
+  0%, 100% { border-bottom-color: var(--brand-red); }
+  50% { border-bottom-color: var(--hero-red); box-shadow: 0 2px 8px rgba(194,0,41,0.4); }
+}

@@ -1,0 +1,183 @@
+.pageWrapper {
+  min-height: 100vh;
+  background: var(--bg);
+  padding-bottom: 80px;
+}
+
+/* Mode tabs */
+.modeTabs {
+  background: var(--paper);
+  border-bottom: 1px solid var(--border);
+}
+
+.modeTabsInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  gap: 0;
+}
+
+.modeTab {
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-mid);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.modeTab:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.modeTabActive {
+  color: var(--text);
+  font-weight: 700;
+  border-bottom-color: var(--brand-red);
+}
+
+/* Main */
+.main {
+  padding: 32px 0 48px;
+}
+
+.mainInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Scenarios grid */
+.scenariosGrid {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* Add scenario column */
+.addScenarioCol {
+  min-width: 160px;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 60px;
+}
+
+.addScenarioBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px;
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  background: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 13px;
+  font-family: var(--font-sans);
+  transition: border-color 0.15s, color 0.15s;
+  width: 100%;
+}
+
+.addScenarioBtn:hover {
+  border-color: var(--interactive);
+  color: var(--interactive);
+}
+
+.addScenarioPlus {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+/* Asset Mix Impact panel */
+.assetMixPanel {
+  margin-top: 16px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.assetMixToggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  font-family: var(--font-sans);
+  text-align: left;
+}
+
+.assetMixToggle:hover {
+  background: var(--bg);
+}
+
+.assetMixChevron {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.assetMixContent {
+  border-top: 1px solid var(--border);
+  padding: 0;
+}
+
+/* Sticky footer */
+.stickyFooter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--text);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 50;
+}
+
+.stickyFooterInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btnExecute {
+  padding: 10px 24px;
+  border-radius: 100px;
+  border: none;
+  background: white;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  font-family: var(--font-sans);
+}
+
+.btnExecute:hover {
+  opacity: 0.85;
+}
+
+.btnFooterLink {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  text-decoration: none;
+  margin-left: auto;
+  transition: color 0.15s;
+}
+
+.btnFooterLink:hover {
+  color: white;
+  text-decoration: none;
+}

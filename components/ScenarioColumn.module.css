@@ -1,0 +1,453 @@
+.column {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.columnHeader {
+  padding: 14px 16px 12px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 90px; /* FIX 13c: equal-height headers */
+}
+
+.scenarioLabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-muted);
+}
+
+.scenarioNameWrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.scenarioNameInput {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 2px 4px;
+  border-radius: 3px;
+  width: 100%;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border-bottom: 1px dashed var(--border);
+  transition: border-color 0.15s;
+}
+
+.scenarioNameInput:focus {
+  border-bottom-color: var(--interactive);
+  cursor: text;
+}
+
+.helperText {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Kebab menu (FIX 13a) */
+.kebabWrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.kebabBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 6px;
+  font-size: 18px;
+  color: var(--text-muted);
+  border-radius: 4px;
+  line-height: 1;
+  transition: background 0.15s, color 0.15s;
+}
+
+.kebabBtn:hover {
+  background: var(--border);
+  color: var(--text);
+}
+
+.kebabMenu {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  z-index: 20;
+  min-width: 130px;
+  overflow: hidden;
+}
+
+.kebabItem {
+  display: block;
+  width: 100%;
+  padding: 9px 14px;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.kebabItem:hover {
+  background: var(--bg);
+}
+
+.kebabItemDelete {
+  color: var(--negative);
+}
+
+/* Horizontal fund table (FIX 12) */
+.fundTableHeader {
+  display: grid;
+  grid-template-columns: 1fr 100px 70px 70px 70px;
+  padding: 8px 16px 6px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--text-muted);
+  gap: 8px;
+}
+
+.fundRows {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.fundRow {
+  display: grid;
+  grid-template-columns: 1fr 100px 70px 70px 70px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+  gap: 8px;
+}
+
+.fundRow:last-child {
+  border-bottom: none;
+}
+
+.fundColFund {
+  min-width: 0;
+}
+
+.fundColAmount {
+  min-width: 0;
+}
+
+.fundColGL {
+  text-align: right;
+  font-size: 12px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.fundColTax {
+  text-align: right;
+  font-size: 12px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.fundTicker {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.fundName {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.inputWrap {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-dark);
+  border-radius: 4px;
+  overflow: hidden;
+  background: white;
+  transition: border-color 0.15s;
+}
+
+.inputWrap:focus-within {
+  border-color: var(--interactive);
+  box-shadow: 0 0 0 1px var(--interactive);
+}
+
+.inputPrefix {
+  padding: 5px 6px;
+  font-size: 12px;
+  color: var(--text-mid);
+  background: var(--bg);
+  border-right: 1px solid var(--border);
+  user-select: none;
+}
+
+.inputField {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 5px 6px;
+  font-size: 12px;
+  color: var(--text);
+  background: white;
+  font-family: var(--font-sans);
+  min-width: 0;
+  width: 100%;
+}
+
+.inputField::placeholder {
+  color: var(--text-muted);
+}
+
+.positive {
+  color: var(--positive);
+}
+
+.negative {
+  color: var(--negative);
+}
+
+.zero {
+  color: var(--text-muted);
+}
+
+/* Tax summary */
+.taxSummary {
+  border-top: 2px solid var(--border);
+  padding: 10px 16px;
+  background: #FAFAFA;
+}
+
+.taxSummaryTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.taxRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 3px 0;
+}
+
+.taxLabel {
+  font-size: 12px;
+  color: var(--text-mid);
+}
+
+.taxValue {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.taxRowTotal {
+  border-top: 1px solid var(--border);
+  margin-top: 4px;
+  padding-top: 6px;
+}
+
+.taxRowTotal .taxLabel {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.taxRowTotal .taxValue {
+  font-size: 14px;
+}
+
+/* ⓘ info icon on GL column (FIX 13b) */
+.infoIconWrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: default;
+}
+
+.infoIcon {
+  color: var(--interactive);
+  font-size: 12px;
+  margin-left: 3px;
+  line-height: 1;
+}
+
+.infoTooltip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  right: 0;
+  background: var(--text);
+  color: white;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  padding: 8px 12px;
+  border-radius: 4px;
+  width: 240px;
+  white-space: normal;
+  z-index: 30;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  pointer-events: none;
+  line-height: 1.5;
+}
+
+.infoTooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 8px;
+  border: 4px solid transparent;
+  border-top-color: var(--text);
+}
+
+/* Asset Mix Impact — stacked bars + pivoted table */
+.assetMixSection {
+  border-top: 2px solid var(--border);
+  padding: 10px 16px 12px;
+  background: #FAFAFA;
+}
+
+.assetMixTitle {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+/* Legend */
+.amLegend {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.amLegendItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: var(--text-mid);
+}
+
+.amLegendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Stacked bars */
+.amBarsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.amBarRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.amBarLabel {
+  font-size: 10px;
+  color: var(--text-muted);
+  width: 56px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.amBarOuter {
+  flex: 1;
+  height: 14px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+}
+
+.amBarSegment {
+  height: 100%;
+  transition: width 0.3s;
+  flex-shrink: 0;
+}
+
+/* Pivoted summary table */
+.amPivotTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.amPivotTable thead th {
+  padding: 0 4px 4px;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.amPivotColHeader {
+  text-align: right;
+}
+
+.amPivotTable tbody tr td {
+  padding: 3px 4px;
+  vertical-align: middle;
+}
+
+.amPivotRowLabel {
+  text-align: left;
+  font-size: 10px;
+  color: var(--text-mid);
+  white-space: nowrap;
+  padding-right: 8px !important;
+}
+
+.amPivotCell {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.amPivotDiffRow td {
+  border-top: 1px solid var(--border);
+  padding-top: 5px !important;
+}

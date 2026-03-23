@@ -1,0 +1,326 @@
+.pageWrapper {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* Mode tabs */
+.modeTabs {
+  background: var(--paper);
+  border-bottom: 1px solid var(--border);
+}
+
+.modeTabsInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  gap: 0;
+}
+
+.modeTab {
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-mid);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.modeTab:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.modeTabActive {
+  color: var(--text);
+  font-weight: 700;
+  border-bottom-color: var(--brand-red);
+}
+
+/* Main */
+.main {
+  padding: 32px 0 48px;
+}
+
+.mainInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Input section */
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.inputCard {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 28px 32px;
+}
+
+.inputTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.inputDesc {
+  font-size: 14px;
+  color: var(--text-mid);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.inputWrap {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-dark);
+  border-radius: 4px;
+  overflow: hidden;
+  background: white;
+  transition: border-color 0.15s;
+}
+
+.inputWrap:focus-within {
+  border-color: var(--interactive);
+  box-shadow: 0 0 0 2px rgba(18, 85, 204, 0.2);
+}
+
+.inputPrefix {
+  padding: 10px 12px;
+  font-size: 15px;
+  color: var(--text-mid);
+  background: var(--bg);
+  border-right: 1px solid var(--border);
+  user-select: none;
+}
+
+.amountInput {
+  border: none;
+  outline: none;
+  padding: 10px 14px;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text);
+  background: white;
+  font-family: var(--font-sans);
+  width: 200px;
+}
+
+.amountInput::placeholder {
+  color: var(--text-muted);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.btnPrimary {
+  padding: 10px 24px;
+  border-radius: 100px;
+  border: none;
+  background: var(--text);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  white-space: nowrap;
+  font-family: var(--font-sans);
+}
+
+.btnPrimary:hover {
+  opacity: 0.85;
+}
+
+.btnPrimary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnSecondary {
+  padding: 10px 24px;
+  border-radius: 100px;
+  border: 1px solid var(--text);
+  background: white;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+  font-family: var(--font-sans);
+}
+
+.btnSecondary:hover {
+  background: var(--bg);
+}
+
+.btnLink {
+  background: none;
+  border: none;
+  color: var(--interactive);
+  font-size: 14px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  text-decoration: underline;
+}
+
+.btnLink:hover {
+  color: var(--text);
+}
+
+.error {
+  color: var(--negative);
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.modeLinks {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.modeLink {
+  background: none;
+  border: none;
+  color: var(--interactive);
+  font-size: 13px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  text-decoration: underline;
+  padding: 0;
+}
+
+.modeLink:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* Wait & Save banner */
+.waitSaveBanner {
+  background: #FFF8E1;
+  border: 1px solid #FFB300;
+  border-radius: 6px;
+}
+
+.waitSaveBannerInner {
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.waitSaveIcon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.waitSaveContent {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.waitSaveBtn {
+  padding: 6px 14px;
+  border-radius: 100px;
+  border: 1px solid var(--warning);
+  background: white;
+  color: var(--warning);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+
+.waitSaveBtn:hover {
+  background: #FFF8E1;
+}
+
+/* Table section */
+.tableSection {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tableSectionHeader {
+  padding: 16px 20px 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Table/Cards toggle */
+.viewToggle {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.toggleBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid var(--border-dark);
+  background: white;
+  color: var(--text-mid);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.toggleBtn:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.toggleBtnActive {
+  background: var(--text);
+  color: white;
+  border-color: var(--text);
+}
+
+.tableSectionTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.tableSectionMeta {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+  flex-wrap: wrap;
+}

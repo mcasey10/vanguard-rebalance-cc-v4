@@ -1,0 +1,106 @@
+.heroBanner {
+  background-color: #660026;
+  background-image:
+    url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2560' height='1440' fill-rule='evenodd'%3E%3Cpath fill='%23c20029' d='M0 0h2560v1440H0z'/%3E%3Cpath d='M0 1440V0h975.0068c41.879 6.147 78.247 21.823 109.055 47.018 30.766 25.195 59.764 64.246 86.84 117.051L1858.593 1440H0z' fill='%23660026'/%3E%3C/svg%3E"),
+    linear-gradient(60deg, rgb(102,0,38) 50%, rgb(194,0,41) 50%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 132px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+}
+
+.innerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.rightCol {
+  text-align: right;
+  flex-shrink: 0;
+  padding-bottom: 2px;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.breadcrumbSep {
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+.welcomeText {
+  font-size: 17px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+}
+
+.portfolioValue {
+  font-size: 34px;
+  font-weight: 700;
+  color: white;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+/* Legacy — kept so other components that pass title prop don't break */
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: white;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 4px;
+}
+
+.rightTopLink {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: default;
+}
+
+.rightSubLine {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 4px;
+}

@@ -1,0 +1,400 @@
+.pageWrapper {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* Main */
+.main {
+  padding: 12px 0 24px;
+}
+
+.mainInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Success banner */
+.successBanner {
+  background: #E8F5E9;
+  border: 1px solid #007A00;
+  border-radius: 8px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.successIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--positive);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.successText strong {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--positive);
+  display: block;
+}
+
+.successText p {
+  font-size: 13px;
+  color: var(--text-mid);
+  margin-top: 2px;
+}
+
+/* Top grid */
+.topGrid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 12px;
+  align-items: start;
+}
+
+/* Card */
+.ordersCard,
+.taxCard,
+.rebalanceCard,
+.stepsCard {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cardHeader {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.cardHeaderOptimized {
+  background: #E8F5E9;
+  color: var(--positive);
+}
+
+.cardHeaderManual {
+  background: #F5F5F5;
+  color: var(--text-mid);
+}
+
+/* Orders table */
+.ordersTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.ordersTable th {
+  text-align: right;
+  padding: 8px 16px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.ordersTable th:first-child {
+  text-align: left;
+}
+
+.ordersTable td {
+  text-align: right;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.ordersTable td:first-child {
+  text-align: left;
+}
+
+.ordersTable tr:last-child td {
+  border-bottom: none;
+}
+
+.fundTicker {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.fundName {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+.numeric {
+  font-variant-numeric: tabular-nums;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  background: #E8F5E9;
+  color: var(--positive);
+  border: 1px solid #A5D6A7;
+}
+
+.totalRow td {
+  border-top: 2px solid var(--border);
+  border-bottom: none;
+}
+
+/* Tax summary */
+.taxCalloutOptimized {
+  background: #E8F5E9;
+  border-bottom: 1px solid var(--border);
+  padding: 12px 16px;
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.taxCalloutManual {
+  background: #FFF8E1;
+  border-bottom: 1px solid var(--border);
+  padding: 12px 16px;
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.taxRows {
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.taxRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 4px 0;
+}
+
+.taxLabel {
+  font-size: 13px;
+  color: var(--text-mid);
+}
+
+.taxValue {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.taxRowTotal {
+  border-top: 1px solid var(--border);
+  padding-top: 8px;
+  margin-top: 4px;
+}
+
+.taxRowTotal .taxLabel {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.positive {
+  color: var(--positive);
+}
+
+/* Rebalance card */
+.assetTiles {
+  display: flex;
+  padding: 12px 16px;
+  gap: 12px;
+}
+
+.assetTile {
+  flex: 1;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.assetTileLabel {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 10px;
+}
+
+.assetTileArrow {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+}
+
+.assetBefore {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-mid);
+}
+
+.assetArrow {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.assetAfter {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* What Happens Next — horizontal stepper */
+.stepperRow {
+  display: flex;
+  align-items: flex-start;
+  padding: 14px 20px 14px;
+  gap: 0;
+}
+
+.stepperItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  text-align: center;
+}
+
+.stepperConnector {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  right: -50%;
+  height: 2px;
+  background: var(--border);
+  z-index: 0;
+}
+
+.stepperText {
+  margin-top: 8px;
+}
+
+.stepCircle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.stepCircleActive {
+  background: var(--positive);
+  color: white;
+}
+
+.stepCircleGrey {
+  background: var(--border);
+  color: var(--text-muted);
+  border: 1px solid var(--border-dark);
+}
+
+.stepTitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.stepDesc {
+  font-size: 11px;
+  color: var(--text-mid);
+  margin-top: 2px;
+  line-height: 1.3;
+  padding: 0 4px;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 2px;
+  padding-bottom: 8px;
+}
+
+.btnPrimary {
+  padding: 10px 24px;
+  border-radius: 100px;
+  border: none;
+  background: var(--text);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.15s;
+  font-family: var(--font-sans);
+}
+
+.btnPrimary:hover {
+  opacity: 0.85;
+  text-decoration: none;
+}
+
+.btnSecondary {
+  padding: 10px 24px;
+  border-radius: 100px;
+  border: 1px solid var(--text);
+  background: white;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-family: var(--font-sans);
+}
+
+.btnSecondary:hover {
+  background: var(--bg);
+}
+
+.btnLink {
+  color: var(--interactive);
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.btnLink:hover {
+  color: var(--text);
+}

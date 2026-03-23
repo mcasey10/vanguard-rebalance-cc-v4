@@ -1,0 +1,282 @@
+.tableWrap {
+  overflow-x: auto;
+  background: var(--paper);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.table th {
+  text-align: right;
+  padding: 10px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  border-bottom: 2px solid var(--border);
+  white-space: nowrap;
+  background: var(--paper);
+}
+
+.table th:first-child {
+  text-align: left;
+}
+
+.table td {
+  text-align: right;
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: middle;
+}
+
+.table td:first-child {
+  text-align: left;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr:hover td {
+  background: #FAFAFA;
+}
+
+/* Fund name cell */
+.fundCell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 200px;
+}
+
+.fundTicker {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.fundName {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+/* Method badge */
+.methodBadge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--bg);
+  color: var(--text-mid);
+  border: 1px solid var(--border);
+}
+
+/* Gain/loss values */
+.positive {
+  color: var(--positive);
+}
+
+.negative {
+  color: var(--negative);
+}
+
+.zero {
+  color: var(--text-muted);
+}
+
+/* Sell amount input */
+.inputWrap {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid var(--border-dark);
+  border-radius: 4px;
+  overflow: hidden;
+  background: white;
+  transition: border-color 0.15s;
+}
+
+.inputWrap:focus-within {
+  border-color: var(--interactive);
+  box-shadow: 0 0 0 1px var(--interactive);
+}
+
+.inputPrefix {
+  padding: 6px 8px;
+  font-size: 13px;
+  color: var(--text-mid);
+  background: var(--bg);
+  border-right: 1px solid var(--border);
+  user-select: none;
+}
+
+.inputField {
+  width: 90px;
+  border: none;
+  outline: none;
+  padding: 6px 8px;
+  font-size: 13px;
+  color: var(--text);
+  background: white;
+  font-family: var(--font-sans);
+}
+
+.inputField::placeholder {
+  color: var(--text-muted);
+}
+
+/* Chevron expand */
+.expandBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--interactive);
+  font-size: 12px;
+  padding: 2px 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  border-radius: 3px;
+  transition: background 0.15s;
+}
+
+.expandBtn:hover {
+  background: var(--bg);
+}
+
+.expandIcon {
+  transition: transform 0.2s;
+}
+
+.expandIconOpen {
+  transform: rotate(180deg);
+}
+
+/* Scrollable lot section — used when a fund has more than 4 lots.
+   Wrapped in a <tr><td colSpan> to avoid display:block on tbody
+   (which breaks column alignment). */
+.lotsScrollWrap {
+  max-height: 160px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.innerLotTable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* Lot detail rows */
+.lotRow td {
+  background: #F9F9F9;
+  font-size: 12px;
+  color: var(--text-mid);
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.lotBadge {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.lotST {
+  background: #FFF3E0;
+  color: var(--warning);
+}
+
+.lotLT {
+  background: #E8F5E9;
+  color: var(--positive);
+}
+
+/* Recommended sell column highlight */
+.sellHighlight {
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* Rationale text */
+.rationaleText {
+  font-size: 11px;
+  color: var(--text-muted);
+  max-width: 180px;
+  line-height: 1.4;
+}
+
+/* ≈ Shares display */
+.sharesApprox {
+  font-size: 12px;
+  color: var(--text-mid);
+}
+
+/* Zero sell row */
+.zeroRow td {
+  opacity: 0.6;
+}
+
+/* VFIAX Wait & Save amber row treatment */
+.vfiaxRow td {
+  background: #FFFBF0 !important;
+}
+.vfiaxRow td:first-child {
+  border-left: 3px solid var(--warning);
+}
+
+.fundTickerRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.waitSaveBadge {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 700;
+  background: #FFF3E0;
+  color: var(--warning);
+  border: 1px solid var(--warning);
+  white-space: nowrap;
+}
+
+.waitSaveHint {
+  font-size: 10px;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-top: 2px;
+  max-width: 240px;
+}
+
+.considerWaiting {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.methodDash {
+  color: var(--text-muted);
+}
+
+/* Lot row date cell */
+.lotDateCell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

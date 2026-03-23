@@ -1,0 +1,192 @@
+.pageWrapper {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* Mode tabs */
+.modeTabs {
+  background: var(--paper);
+  border-bottom: 1px solid var(--border);
+}
+
+.modeTabsInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  gap: 0;
+}
+
+.modeTab {
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-mid);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.modeTab:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.modeTabActive {
+  color: var(--text);
+  font-weight: 700;
+  border-bottom-color: var(--brand-red);
+}
+
+/* Main */
+.main {
+  padding: 32px 0 48px;
+}
+
+.mainInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Table section */
+.tableSection {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tableSectionHeader {
+  padding: 16px 20px 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.tableSectionTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.tableSectionMeta {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.calcIndicator {
+  color: var(--interactive);
+  font-style: italic;
+}
+
+/* View toggle */
+.viewToggle {
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.toggleBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-mid);
+  background: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  border-right: 1px solid var(--border);
+  font-family: var(--font-sans);
+}
+
+.toggleBtn:last-child {
+  border-right: none;
+}
+
+.toggleBtn:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.toggleBtnActive {
+  background: var(--text);
+  color: white;
+}
+
+.toggleBtnActive:hover {
+  background: var(--text);
+  color: white;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  padding: 10px 24px;
+  border-radius: 100px;
+  border: none;
+  background: var(--text);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  white-space: nowrap;
+  font-family: var(--font-sans);
+}
+
+.btnPrimary:hover {
+  opacity: 0.85;
+}
+
+.btnPrimary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btnSecondary {
+  padding: 10px 24px;
+  border-radius: 100px;
+  border: 1px solid var(--text);
+  background: white;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+  font-family: var(--font-sans);
+}
+
+.btnSecondary:hover {
+  background: var(--bg);
+}
+
+.btnLink {
+  color: var(--interactive);
+  font-size: 14px;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.15s;
+}
+
+.btnLink:hover {
+  text-decoration-color: var(--interactive);
+}
